@@ -47,7 +47,7 @@ const App = () => {
   const filteredPokemons: PokemonProps[] = data.pokemons.filter((pokemon: PokemonProps) => pokemon.name.toLowerCase().includes(value.toLowerCase()));
 
   return (
-    <Container>
+    <Container> 
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header>
           <Link to="/">

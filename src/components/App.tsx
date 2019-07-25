@@ -36,7 +36,7 @@ const GET_POKEMONS = gql`
 
 const App = () => {
   const { data, loading } = useQuery(GET_POKEMONS, {
-    variables: { first: 150 },
+    variables: { first: 151 },
   });
   const [value, setValue] = useState("")
 

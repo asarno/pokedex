@@ -24,3 +24,12 @@ Builds the app for production to the `build` folder.<br>
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
+
+## TODO:
+
+1. Abstracting the graphql queries into a single file (similar to how I made a `types` & `styledComponents`
+2. Fixing up the loaders after selecting a Pokemon (show poke ball for each card as it fetches corresponding evolutions of a selected Pokemon)
+3. Make search bar adjust depending on size of screen (mobile friendly)
+4. Write tests
+5. Set up CI process
+

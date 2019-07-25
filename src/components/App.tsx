@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
+// typescript types
+import { PokemonProps } from "./types";
+
+// components
 import PokemonList from "./PokemonList";
 import Pokemon from './Pokemon';
 import Loading from './Loading';
+import { 
+  Container, 
+  Header, 
+  Input, 
+  HeaderImage, 
+  Delete
+} from "./styledComponents";
 
-import { Container, Header, Input, HeaderImage, Delete} from "./styledComponents";
-import { Link } from 'react-router-dom';
-import { PokemonProps } from "./types";
 
+// graphql query
 const GET_POKEMONS = gql`
   query getPokemons($first: Int!) {
     pokemons(first: $first) {
@@ -35,12 +44,11 @@ const App = () => {
     return <Loading type="main" />
   }
 
-  const filteredPokemons = data.pokemons.filter((pokemon: PokemonProps) => pokemon.name.toLowerCase().includes(value.toLowerCase()));
+  const filteredPokemons: PokemonProps[] = data.pokemons.filter((pokemon: PokemonProps) => pokemon.name.toLowerCase().includes(value.toLowerCase()));
 
   return (
     <Container>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-
         <Header>
           <Link to="/">
             <HeaderImage src={require("../res/pokedex.png")} />

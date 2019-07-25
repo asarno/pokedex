@@ -1,12 +1,9 @@
 import React from 'react';
-import PokemonDetails from './PokemonDetails';
-
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
-import {
-    List,
-    Container,
-} from "./styledComponents";
+
+import PokemonDetails from './PokemonDetails';
+import { List, Container } from "./styledComponents";
 import Loading from './Loading';
 
 const GET_POKEMON = gql`

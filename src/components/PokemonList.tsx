@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { CARD_COLORS, PokemonProps } from './types';
+
 import {
     Container,
     List,
@@ -13,7 +15,7 @@ import {
 } from "./styledComponents";
 
 const PokemonList = (props: any) => {
-    const pokemons = props.pokemons;
+    const pokemons: PokemonProps[] = props.pokemons;
 
     return (
         <Container>

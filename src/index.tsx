@@ -9,8 +9,6 @@ const client = new ApolloClient({
   uri: "https://pokemon-samdavies.stylindex.now.sh"
 });
 
-
-
 ReactDOM.render(
     <ApolloProvider client={client}>
         <App />

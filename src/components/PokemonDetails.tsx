@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { CARD_COLORS } from './types';
+import { CARD_COLORS } from '../utils/types';
 import ReactCardFlip from 'react-card-flip';
 import Loading from './Loading';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CARD_COLORS, PokemonProps } from './types';
+import { CARD_COLORS, PokemonProps } from '../utils/types';
 
 import {
     Container,

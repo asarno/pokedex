@@ -4,7 +4,7 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
 // typescript types
-import { PokemonProps } from "./types";
+import { PokemonProps } from "../utils/types";
 
 // components
 import PokemonList from "./PokemonList";
